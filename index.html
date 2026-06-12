@@ -3,223 +3,344 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Senior Product Manager — Fintech, Healthcare, AI. X12, HL7/FHIR, AWS, Claude API, LangChain. 10M+ users.">
-<meta name="theme-color" content="#ffffff">
-<meta property="og:title" content="Vittobha Vignesh S — PM · Health FHIR · Fintech · AI">
-<meta property="og:description" content="10 years where Fintech, Insurance, and AI converge. 10M+ users, $15M+ savings.">
+<meta name="description" content="Senior Product Manager — Fintech, Healthcare, AI. Agentic AI, RAG, FHIR, X12, KYC/AML. 1M+ consumers · 20K enterprise · 20 countries.">
+<meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0f1a" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Vittobha Vignesh S — Senior PM · AI · BFSI · Healthcare">
+<meta property="og:description" content="10 years where Fintech, Health, and AI converge. 1M+ users · $15M+ saved · 20 countries.">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/264982118?v=4">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>V</text></svg>">
-<title>Vittobha Vignesh S — PM · Health FHIR · Fintech · AI</title>
+<meta property="og:url" content="https://vittobh.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563eb'/><text x='50' y='70' font-size='62' font-family='Inter,sans-serif' font-weight='800' text-anchor='middle' fill='white'>V</text></svg>">
+<title>Vittobha Vignesh S — PM · AI · BFSI · Healthcare</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --black:#1f2328;--gray:#656d76;--light:#d0d7de;--subtle:#f6f8fa;--white:#fff;
-  --bar:#1f2328;--bar-track:#e1e4e8;--sw:240px;
+  --bg:#ffffff;--bg-alt:#f6f8fa;--card:#ffffff;--text:#0b1220;--muted:#5b6b85;
+  --border:#e3e8f0;--accent:#2563eb;--accent-soft:#dbeafe;--accent-2:#16a34a;
+  --bar-track:#e1e4e8;--shadow:0 1px 3px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.04);
+  --shadow-lg:0 4px 24px rgba(37,99,235,.12);--sw:260px;--radius:10px;
 }
-html{scroll-behavior:smooth}
-body{font-family:'Trebuchet MS',Trebuchet,sans-serif;background:var(--white);color:var(--black);line-height:1.55;font-size:13px;-webkit-font-smoothing:antialiased}
-a{color:var(--black);text-decoration:none;transition:.15s}
-a:hover{color:var(--gray)}
-::selection{background:var(--black);color:var(--white)}
+:root[data-theme="dark"]{
+  --bg:#0b0f1a;--bg-alt:#111726;--card:#161d2f;--text:#e7ecf3;--muted:#94a3b8;
+  --border:#232c44;--accent:#6ea8ff;--accent-soft:#1e3a8a;--accent-2:#8aff9a;
+  --bar-track:#232c44;--shadow:0 1px 3px rgba(0,0,0,.4),0 4px 12px rgba(0,0,0,.2);
+  --shadow-lg:0 4px 24px rgba(110,168,255,.18);
+}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{
+  font-family:'Inter','SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.55;font-size:13.5px;
+  -webkit-font-smoothing:antialiased;letter-spacing:-0.005em;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0.018 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+:root[data-theme="dark"] body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");}
+a{color:var(--text);text-decoration:none;transition:color .15s}
+a:hover{color:var(--accent)}
+::selection{background:var(--accent);color:#fff}
+
+/* FOCUS - accessibility */
+*:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 
 /* LAYOUT */
 .wrap{display:flex;min-height:100vh}
 
 /* SIDEBAR */
-.sb{width:var(--sw);position:fixed;top:0;left:0;height:100vh;background:var(--subtle);border-right:1px solid var(--light);overflow-y:auto;padding:1.1rem 1rem;z-index:50;display:flex;flex-direction:column;gap:.65rem}
-.sb::-webkit-scrollbar{width:3px}
-.sb::-webkit-scrollbar-thumb{background:var(--light);border-radius:2px}
-.sb-name{font-size:1.2rem;font-weight:700;letter-spacing:-.03em}
-.sb-role{font-size:.7rem;color:var(--gray);line-height:1.35;margin-top:.1rem}
-.sb-tag{display:inline-block;margin-top:.35rem;padding:.15rem .55rem;font-size:.62rem;background:var(--white);border:1px solid var(--light);border-radius:12px;color:var(--gray)}
+.sb{width:var(--sw);position:fixed;top:0;left:0;height:100vh;background:var(--bg-alt);border-right:1px solid var(--border);overflow-y:auto;padding:1.4rem 1.1rem;z-index:50;display:flex;flex-direction:column;gap:.7rem;transition:transform .3s ease}
+.sb::-webkit-scrollbar{width:4px}
+.sb::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
 
-.sb-lbl{font-size:.6rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.3rem;margin-top:.1rem}
-.sb-lk{display:block;font-size:.7rem;color:var(--gray);padding:.12rem 0}
-.sb-lk:hover{color:var(--black)}
+.avatar-wrap{display:flex;align-items:center;gap:.65rem;margin-bottom:.2rem}
+.avatar{width:48px;height:48px;border-radius:50%;border:2px solid var(--accent);object-fit:cover;background:var(--card)}
+.avatar-meta{flex:1;min-width:0}
+.sb-name{font-size:1.05rem;font-weight:700;letter-spacing:-.025em;line-height:1.15}
+.sb-role{font-size:.66rem;color:var(--muted);line-height:1.35;margin-top:.1rem}
+.sb-tag{display:inline-block;margin-top:.3rem;padding:.15rem .55rem;font-size:.6rem;background:var(--accent-soft);color:var(--accent);border-radius:12px;font-weight:600}
+:root[data-theme="dark"] .sb-tag{color:#cfe2ff}
 
-.sb-stats{display:flex;gap:.3rem;flex-wrap:wrap}
-.sb-st{flex:1;min-width:50px;text-align:center;padding:.3rem .15rem;background:var(--white);border:1px solid var(--light);border-radius:4px}
-.sb-st .n{font-size:.9rem;font-weight:700;font-family:Consolas,monospace}
-.sb-st .l{font-size:.5rem;color:var(--gray);text-transform:uppercase;letter-spacing:.03em}
+.sb-lbl{font-size:.58rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.3rem;margin-top:.2rem}
+.sb-lk{display:flex;align-items:center;gap:.4rem;font-size:.7rem;color:var(--muted);padding:.18rem 0;transition:color .15s}
+.sb-lk:hover{color:var(--accent)}
+.sb-lk svg{width:11px;height:11px;flex-shrink:0}
 
-/* SKILL BARS */
-.sk-g{margin-bottom:.15rem}
-.sk-g-t{font-size:.65rem;font-weight:700;color:var(--black);margin-bottom:.3rem}
-.sk{margin-bottom:.3rem}
-.sk .sk-n{font-size:.6rem;color:var(--black);display:flex;justify-content:space-between;margin-bottom:.1rem;font-weight:500}
-.sk .sk-n span{font-family:Consolas,monospace;font-size:.55rem;color:var(--gray);font-weight:700}
-.sk .tr{height:4px;background:var(--bar-track);border-radius:2px;overflow:hidden}
-.sk .fl{height:100%;background:var(--bar);border-radius:2px;transition:width .8s ease}
+.sb-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:.35rem}
+.sb-st{text-align:center;padding:.4rem .25rem;background:var(--card);border:1px solid var(--border);border-radius:6px;transition:transform .2s,border-color .2s}
+.sb-st:hover{border-color:var(--accent);transform:translateY(-1px)}
+.sb-st .n{font-size:1rem;font-weight:700;font-family:'JetBrains Mono',Consolas,monospace;color:var(--text)}
+.sb-st .l{font-size:.52rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin-top:.1rem}
 
-.sb-cta{display:block;text-align:center;padding:.4rem;background:var(--black);color:var(--white);border-radius:5px;font-size:.72rem;font-weight:700;margin-top:auto;transition:.15s}
-.sb-cta:hover{background:var(--gray);color:var(--white)}
+/* SKILL DOTS - replaces bars */
+.sk-g{margin-bottom:.2rem}
+.sk-g-t{font-size:.62rem;font-weight:700;color:var(--text);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.06em}
+.sk{display:flex;align-items:center;justify-content:space-between;margin-bottom:.4rem;gap:.5rem}
+.sk-n{font-size:.66rem;color:var(--text);font-weight:500;flex:1;min-width:0}
+.dots{display:inline-flex;gap:3px;flex-shrink:0}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--bar-track);transition:background .3s}
+.dot.on{background:var(--accent)}
+
+.sb-cta{display:block;text-align:center;padding:.55rem;background:var(--accent);color:#fff;border-radius:8px;font-size:.72rem;font-weight:700;margin-top:auto;transition:.2s;letter-spacing:.01em}
+.sb-cta:hover{background:var(--text);color:#fff;transform:translateY(-1px)}
+:root[data-theme="dark"] .sb-cta:hover{background:#fff;color:var(--accent)}
+
+/* THEME TOGGLE */
+.theme-toggle{position:fixed;top:.7rem;right:1rem;z-index:60;background:var(--card);border:1px solid var(--border);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--muted);transition:all .2s;font-size:14px}
+.theme-toggle:hover{color:var(--accent);border-color:var(--accent);transform:rotate(15deg)}
+.theme-toggle svg{width:14px;height:14px}
+
+/* HAMBURGER (mobile) */
+.burger{display:none;position:fixed;top:.7rem;left:1rem;z-index:60;background:var(--card);border:1px solid var(--border);border-radius:8px;width:36px;height:36px;align-items:center;justify-content:center;cursor:pointer;color:var(--text)}
 
 /* MAIN */
-.mn{margin-left:var(--sw);flex:1}
+.mn{margin-left:var(--sw);flex:1;min-width:0}
 
-.tnav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);z-index:40;border-bottom:1px solid var(--light);padding:0 1.5rem;height:34px;display:flex;align-items:center;gap:1.5rem}
-.tnav a{color:var(--gray);font-size:.7rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
-.tnav a:hover{color:var(--black)}
+.tnav{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:40;border-bottom:1px solid var(--border);padding:0 1.5rem;height:42px;display:flex;align-items:center;gap:1.4rem;overflow-x:auto}
+:root[data-theme="dark"] .tnav{background:rgba(11,15,26,.85)}
+.tnav a{color:var(--muted);font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.4rem .1rem;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s}
+.tnav a:hover{color:var(--text)}
+.tnav a.active{color:var(--accent);border-bottom-color:var(--accent)}
 
-.hero{padding:1.2rem 1.5rem .8rem}
-.hero h1{font-size:1.5rem;font-weight:700;line-height:1.2;margin-bottom:.4rem;letter-spacing:-.03em}
-.hero p{font-size:.82rem;color:var(--gray);max-width:660px;line-height:1.6}
+.hero{padding:2rem 1.5rem 1.2rem;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(1.4rem,3.2vw,2rem);font-weight:800;line-height:1.15;margin-bottom:.5rem;letter-spacing:-.035em}
+.hero h1 .grad{background:linear-gradient(135deg,var(--accent),#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:.85rem;color:var(--muted);max-width:680px;line-height:1.65}
+.hero-svg{position:absolute;top:0;right:0;width:280px;height:100%;opacity:.06;pointer-events:none}
 
-.sec{padding:1rem 1.5rem}
-.sec h2{font-size:1.1rem;font-weight:700;margin-bottom:.1rem;letter-spacing:-.02em}
-.sec .sub{color:var(--gray);font-size:.72rem;margin-bottom:.8rem}
+.sec{padding:1.2rem 1.5rem;position:relative}
+.sec h2{font-size:1.05rem;font-weight:700;margin-bottom:.15rem;letter-spacing:-.02em;display:flex;align-items:center;gap:.45rem}
+.sec h2 .ico{font-size:1rem}
+.sec .sub{color:var(--muted);font-size:.72rem;margin-bottom:.9rem}
+
+/* GRADIENT DIVIDER */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent);margin:0 1.5rem}
 
 /* EXP CARDS */
-.exp{background:var(--white);border:1px solid var(--light);border-radius:6px;padding:.7rem .9rem;margin-bottom:.45rem;position:relative;transition:box-shadow .2s}
-.exp:hover{box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.exp::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px;background:var(--black)}
-.exp-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem;margin-bottom:.2rem}
-.exp-top h3{font-size:.85rem;font-weight:700}
-.exp-top .co{font-size:.72rem;color:var(--gray);font-weight:500}
-.exp-top .dt{font-family:Consolas,monospace;font-size:.65rem;color:var(--gray)}
-.exp-sc{font-size:.7rem;color:var(--gray);font-style:italic;margin-bottom:.25rem}
-.exp ul{list-style:none;padding:0}
-.exp ul li{padding-left:.8rem;position:relative;font-size:.75rem;color:var(--gray);margin-bottom:.15rem;line-height:1.5}
-.exp ul li::before{content:'—';position:absolute;left:0;color:var(--light);font-weight:700;font-size:.7rem}
-.exp ul li strong{color:var(--black);font-weight:600}
-.exp .out{margin-top:.25rem;padding:.25rem .5rem;background:var(--subtle);border-radius:3px;font-family:Consolas,monospace;font-size:.65rem;color:var(--black);line-height:1.5}
-.exp .tags{display:flex;flex-wrap:wrap;gap:.2rem;margin-top:.25rem}
-.exp .tags span{font-family:Consolas,monospace;font-size:.58rem;padding:.08rem .3rem;border-radius:3px;border:1px solid var(--light);color:var(--gray)}
+.exp{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.85rem 1rem;margin-bottom:.55rem;position:relative;transition:all .25s ease}
+.exp:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:var(--accent)}
+.exp::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:var(--radius) 0 0 var(--radius);background:linear-gradient(180deg,var(--accent),#7c3aed)}
+.exp-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;margin-bottom:.25rem;padding-left:.4rem}
+.exp-top h3{font-size:.88rem;font-weight:700;letter-spacing:-.01em}
+.exp-top .co{font-size:.72rem;color:var(--accent);font-weight:600;margin-top:.1rem}
+.exp-top .dt{font-family:'JetBrains Mono',Consolas,monospace;font-size:.65rem;color:var(--muted);background:var(--bg-alt);padding:.18rem .5rem;border-radius:4px;align-self:flex-start}
+.exp-sc{font-size:.7rem;color:var(--muted);font-style:italic;margin-bottom:.35rem;padding-left:.4rem}
+.exp ul{list-style:none;padding:0 0 0 .4rem}
+.exp ul li{padding-left:1rem;position:relative;font-size:.76rem;color:var(--muted);margin-bottom:.2rem;line-height:1.55}
+.exp ul li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-weight:700;font-size:.65rem;top:.15rem}
+.exp ul li strong{color:var(--text);font-weight:600}
+.exp .out{margin-top:.35rem;margin-left:.4rem;padding:.4rem .6rem;background:var(--bg-alt);border-left:2px solid var(--accent-2);border-radius:4px;font-family:'JetBrains Mono',Consolas,monospace;font-size:.66rem;color:var(--text);line-height:1.6}
+.exp .tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.35rem;padding-left:.4rem}
+.exp .tags span{font-family:'JetBrains Mono',Consolas,monospace;font-size:.6rem;padding:.12rem .4rem;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+:root[data-theme="dark"] .exp .tags span{color:#cfe2ff}
 
-/* ARCHITECTURE */
-.arch{background:var(--white);border:1px solid var(--light);border-radius:6px;padding:.7rem;margin-bottom:.5rem}
-.arch-title{font-size:.78rem;font-weight:700;margin-bottom:.4rem}
-.arch-flow{display:flex;gap:.2rem;flex-wrap:wrap;align-items:center}
-.arch-box{background:var(--subtle);border:1px solid var(--light);border-radius:4px;padding:.25rem .45rem;text-align:center;min-width:70px}
-.arch-box .ab-t{font-size:.62rem;font-weight:700;color:var(--black)}
-.arch-box .ab-s{font-size:.5rem;color:var(--gray)}
-.arch-arrow{color:var(--light);font-size:.8rem;font-weight:700}
+/* ARCHITECTURE with SVG arrows */
+.arch{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem;margin-bottom:.6rem;transition:all .25s}
+.arch:hover{box-shadow:var(--shadow);border-color:var(--accent)}
+.arch-title{font-size:.82rem;font-weight:700;margin-bottom:.6rem;display:flex;align-items:center;gap:.4rem}
+.arch-title::before{content:'';width:4px;height:14px;background:var(--accent);border-radius:2px}
+.arch-flow{display:flex;gap:.15rem;flex-wrap:wrap;align-items:center}
+.arch-box{background:linear-gradient(135deg,var(--bg-alt),var(--card));border:1px solid var(--border);border-radius:6px;padding:.4rem .55rem;text-align:center;min-width:78px;transition:all .2s}
+.arch-box:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.arch-box .ab-t{font-size:.64rem;font-weight:700;color:var(--text);letter-spacing:-.01em}
+.arch-box .ab-s{font-size:.52rem;color:var(--muted);margin-top:.1rem;font-family:'JetBrains Mono',Consolas,monospace}
+.arch-arrow{color:var(--accent);font-size:1rem;font-weight:700;opacity:.6}
 
-/* EXPLORE */
-.expl{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.4rem}
-.expl-card{background:var(--subtle);border:1px solid var(--light);border-radius:5px;padding:.5rem .65rem}
-.expl-card h4{font-size:.7rem;font-weight:700;margin-bottom:.15rem}
-.expl-card p{font-size:.62rem;color:var(--gray);line-height:1.45}
+/* EXPLORE / ENGAGEMENTS */
+.expl{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.5rem}
+.expl-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.7rem .8rem;transition:all .2s}
+.expl-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.expl-card h4{font-size:.72rem;font-weight:700;margin-bottom:.2rem;color:var(--text)}
+.expl-card p{font-size:.66rem;color:var(--muted);line-height:1.5}
+
+/* PROJECT TILES */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.6rem}
+.proj-tile{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;display:flex;flex-direction:column;gap:.4rem;transition:all .25s;text-decoration:none;color:var(--text);position:relative;overflow:hidden}
+.proj-tile::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#7c3aed);opacity:0;transition:opacity .2s}
+.proj-tile:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--accent);color:var(--text)}
+.proj-tile:hover::before{opacity:1}
+.proj-tile h4{font-size:.84rem;font-weight:700;letter-spacing:-.015em;display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.proj-tile h4 .arrow{color:var(--accent);font-size:.85rem;transition:transform .2s}
+.proj-tile:hover h4 .arrow{transform:translate(2px,-2px)}
+.proj-tile p{font-size:.72rem;color:var(--muted);line-height:1.55}
+.proj-stack{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.3rem}
+.proj-stack span{font-family:'JetBrains Mono',Consolas,monospace;font-size:.58rem;padding:.12rem .4rem;border-radius:4px;background:var(--bg-alt);color:var(--muted);border:1px solid var(--border)}
 
 /* TOOLS */
-.tp{font-family:Consolas,monospace;font-size:.62rem;padding:.12rem .35rem;border-radius:3px;background:var(--subtle);border:1px solid var(--light);color:var(--gray);display:inline-block;margin:.1rem}
+.tp{font-family:'JetBrains Mono',Consolas,monospace;font-size:.64rem;padding:.18rem .45rem;border-radius:5px;background:var(--card);border:1px solid var(--border);color:var(--muted);display:inline-block;margin:.12rem;transition:all .15s}
+.tp:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 
 /* CERTS */
-.ct{background:var(--subtle);border:1px solid var(--light);border-radius:5px;padding:.3rem .5rem;text-align:center;flex:1;min-width:100px}
-.ct .cn{font-size:.7rem;font-weight:700}.ct .co{font-size:.58rem;color:var(--gray)}
+.ct{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.5rem .65rem;text-align:center;flex:1;min-width:120px;transition:all .2s}
+.ct:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.ct .cn{font-size:.72rem;font-weight:700;color:var(--text)}
+.ct .co{font-size:.6rem;color:var(--muted);margin-top:.15rem}
 
-footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border-top:1px solid var(--light)}
+/* BACK TO TOP */
+.totop{position:fixed;bottom:1.5rem;right:1.5rem;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--shadow-lg);z-index:55;opacity:0;pointer-events:none;transition:all .25s;border:none}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{transform:translateY(-3px);background:var(--text)}
+:root[data-theme="dark"] .totop:hover{background:#fff;color:var(--accent)}
+.totop svg{width:16px;height:16px}
 
-.fade{opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s}
+footer{text-align:center;padding:1rem;color:var(--muted);font-size:.65rem;border-top:1px solid var(--border);margin-top:1rem}
+footer a{color:var(--accent)}
+
+.fade{opacity:0;transform:translateY(15px);transition:opacity .5s ease,transform .5s ease}
 .fade.vis{opacity:1;transform:none}
 
 @media(max-width:860px){
-  .sb{position:relative;width:100%;height:auto;border-right:none;border-bottom:1px solid var(--light)}
-  .mn{margin-left:0}.wrap{flex-direction:column}
+  .sb{position:fixed;width:280px;transform:translateX(-100%);height:100vh;border-right:1px solid var(--border)}
+  .sb.open{transform:translateX(0);box-shadow:0 0 50px rgba(0,0,0,.3)}
+  .mn{margin-left:0}
+  .wrap{flex-direction:column}
+  .burger{display:flex}
+  .theme-toggle{right:.7rem}
+  .hero{padding-top:3rem}
+  .tnav{padding-left:3.2rem}
 }
 
 @media print{
-  .sb{position:relative;width:100%;height:auto;border:none;page-break-after:avoid;background:#fff}
-  .mn{margin-left:0}.wrap{flex-direction:column}
-  .tnav,.sb-cta{display:none}
-  .exp{border:1px solid #ddd;page-break-inside:avoid}
+  .sb{position:relative;width:100%;height:auto;border:none;page-break-after:avoid;background:#fff;transform:none}
+  .mn{margin-left:0}
+  .wrap{flex-direction:column}
+  .tnav,.sb-cta,.theme-toggle,.burger,.totop,.hero-svg{display:none}
+  .exp{border:1px solid #ddd;page-break-inside:avoid;box-shadow:none}
   .exp::before{background:#000}
-  body{font-size:11px}
+  .arch{box-shadow:none;page-break-inside:avoid}
+  body{font-size:11px;background:#fff !important}
+  body{background-image:none}
 }
 </style>
 </head>
 <body>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+</button>
+
+<button class="burger" id="burger" aria-label="Toggle menu">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+
 <div class="wrap">
 
-<aside class="sb">
-  <div>
-    <div class="sb-name">Vittobha Vignesh S</div>
-    <div class="sb-role">Senior Product Manager<br>Health FHIR · Fintech · AI</div>
-    <div class="sb-tag">Open to PM roles</div>
+<aside class="sb" id="sidebar">
+  <div class="avatar-wrap">
+    <img src="https://avatars.githubusercontent.com/u/264982118?v=4" class="avatar" alt="Vittobha Vignesh S">
+    <div class="avatar-meta">
+      <div class="sb-name">Vittobha Vignesh S</div>
+      <div class="sb-role">Senior Product Manager<br>AI · BFSI · Healthcare</div>
+    </div>
   </div>
+  <div><span class="sb-tag">Open to PM roles</span></div>
 
   <div>
     <div class="sb-lbl">Contact</div>
-    <a href="mailto:vittobha2025@gmail.com" class="sb-lk">vittobha2025@gmail.com</a>
-    <a href="tel:+919486724628" class="sb-lk">+91 94867 24628</a>
-    <a href="https://linkedin.com/in/vittobha" class="sb-lk">linkedin.com/in/vittobha</a>
-    <a href="https://github.com/vittobh" class="sb-lk">github.com/vittobh</a>
+    <a href="mailto:vittobha2025@gmail.com" class="sb-lk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>vittobha2025@gmail.com</a>
+    <a href="tel:+919486724628" class="sb-lk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.98.37 1.93.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.88.33 1.83.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+91 94867 24628</a>
+    <a href="https://linkedin.com/in/vittobha" class="sb-lk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V8h3v11zM6.5 6.73c-.97 0-1.75-.79-1.75-1.76 0-.97.78-1.76 1.75-1.76s1.75.79 1.75 1.76c0 .97-.78 1.76-1.75 1.76zM20 19h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V19h-3V8h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V19z"/></svg>linkedin.com/in/vittobha</a>
+    <a href="https://github.com/vittobh" class="sb-lk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>github.com/vittobh</a>
   </div>
 
   <div class="sb-stats">
-    <div class="sb-st"><div class="n">10M</div><div class="l">Users</div></div>
-    <div class="sb-st"><div class="n">$15M</div><div class="l">Saved</div></div>
-    <div class="sb-st"><div class="n">20K</div><div class="l">Ent.</div></div>
-    <div class="sb-st"><div class="n">3×</div><div class="l">0→1</div></div>
+    <div class="sb-st"><div class="n" data-count="10">0</div><div class="l">Yrs PM</div></div>
+    <div class="sb-st"><div class="n" data-count="20" data-suffix="K">0</div><div class="l">Enterprise</div></div>
+    <div class="sb-st"><div class="n" data-count="1" data-suffix="M+">0</div><div class="l">Consumers</div></div>
+    <div class="sb-st"><div class="n" data-count="20">0</div><div class="l">Countries</div></div>
+    <div class="sb-st"><div class="n" data-prefix="$" data-count="15" data-suffix="M+">0</div><div class="l">Saved</div></div>
+    <div class="sb-st"><div class="n" data-count="12">0</div><div class="l">Releases</div></div>
   </div>
 
   <div class="sk-g">
     <div class="sk-g-t">Fintech & BFSI</div>
-    <div class="sk"><div class="sk-n">Stripe / Payment APIs<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
-    <div class="sk"><div class="sk-n">Bank Reconciliation / SFTP<span>92</span></div><div class="tr"><div class="fl" style="width:92%"></div></div></div>
-    <div class="sk"><div class="sk-n">Risk Profiling / KYC<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
-    <div class="sk"><div class="sk-n">Fund Lifecycle / 3-in-1<span>90</span></div><div class="tr"><div class="fl" style="width:90%"></div></div></div>
-    <div class="sk"><div class="sk-n">Pricing Engine / Cross-Sell<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
+    <div class="sk"><span class="sk-n">Stripe / Payment APIs</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
+    <div class="sk"><span class="sk-n">Bank Reconciliation / SFTP</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
+    <div class="sk"><span class="sk-n">Risk Profiling / KYC / AML</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span></div>
+    <div class="sk"><span class="sk-n">Fund Lifecycle / Capital Mkts</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
   </div>
 
   <div class="sk-g">
     <div class="sk-g-t">Healthcare & Insurance</div>
-    <div class="sk"><div class="sk-n">HL7 / FHIR / EHR<span>93</span></div><div class="tr"><div class="fl" style="width:93%"></div></div></div>
-    <div class="sk"><div class="sk-n">X12 (837/835/270/271)<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
-    <div class="sk"><div class="sk-n">ICD-10 / Claims / Eligibility<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
-    <div class="sk"><div class="sk-n">HIPAA / GDPR / PCI-DSS<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
-    <div class="sk"><div class="sk-n">Consent / Provider Networks<span>87</span></div><div class="tr"><div class="fl" style="width:87%"></div></div></div>
+    <div class="sk"><span class="sk-n">HL7 / FHIR / EHR</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
+    <div class="sk"><span class="sk-n">X12 EDI (837/835/270)</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span></div>
+    <div class="sk"><span class="sk-n">ICD-10 / Claims</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span></div>
+    <div class="sk"><span class="sk-n">HIPAA / GDPR / PCI-DSS</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
   </div>
 
   <div class="sk-g">
     <div class="sk-g-t">AI Integration</div>
-    <div class="sk"><div class="sk-n">Claude API / Anthropic<span>92</span></div><div class="tr"><div class="fl" style="width:92%"></div></div></div>
-    <div class="sk"><div class="sk-n">ChatGPT API / OpenAI<span>90</span></div><div class="tr"><div class="fl" style="width:90%"></div></div></div>
-    <div class="sk"><div class="sk-n">AWS Bedrock / Meta Llama<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
-    <div class="sk"><div class="sk-n">LangChain / CrewAI / LangGraph<span>83</span></div><div class="tr"><div class="fl" style="width:83%"></div></div></div>
-    <div class="sk"><div class="sk-n">RAG / Guardrails / Observability<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
+    <div class="sk"><span class="sk-n">Claude API · Anthropic</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
+    <div class="sk"><span class="sk-n">OpenAI · GPT-4o</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
+    <div class="sk"><span class="sk-n">AWS Bedrock · Meta Llama</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span></div>
+    <div class="sk"><span class="sk-n">LangChain · LangGraph · MCP</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span></div>
+    <div class="sk"><span class="sk-n">RAG · Guardrails · Eval</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
   </div>
 
   <div class="sk-g">
     <div class="sk-g-t">PM Strategy</div>
-    <div class="sk"><div class="sk-n">AI Roadmapping / Strategy<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
-    <div class="sk"><div class="sk-n">PRD / BRD / User Stories<span>97</span></div><div class="tr"><div class="fl" style="width:97%"></div></div></div>
-    <div class="sk"><div class="sk-n">OKRs / North Star / RICE<span>92</span></div><div class="tr"><div class="fl" style="width:92%"></div></div></div>
-    <div class="sk"><div class="sk-n">Agile / SAFe / Scrum<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
+    <div class="sk"><span class="sk-n">PRD · BRD · User Stories</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
+    <div class="sk"><span class="sk-n">OKRs · RICE · North Star</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
+    <div class="sk"><span class="sk-n">Agile · SAFe · Scrum</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span></div>
   </div>
 
   <div class="sk-g">
     <div class="sk-g-t">AWS Cloud</div>
-    <div class="sk"><div class="sk-n">S3 / Lambda / SQS / SNS<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
-    <div class="sk"><div class="sk-n">API Gateway / CloudWatch / IAM<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
-    <div class="sk"><div class="sk-n">Bedrock / ECR / Terraform<span>82</span></div><div class="tr"><div class="fl" style="width:82%"></div></div></div>
+    <div class="sk"><span class="sk-n">S3 · Lambda · SQS · SNS</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span></div>
+    <div class="sk"><span class="sk-n">Bedrock · ECR · Terraform</span><span class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span></div>
   </div>
 
-  <a href="https://github.com/vittobh/vittobh/raw/main/resume/Vittobha_Resume.pdf" class="sb-cta">Download Resume</a>
+  <a href="https://github.com/vittobh/vittobh/raw/main/resume/Vittobha_Resume.pdf" class="sb-cta" target="_blank" rel="noopener">↓ Download Resume</a>
 </aside>
 
 <div class="mn">
-<nav class="tnav" aria-label="Main"><a href="#exp">Experience</a><a href="#arch">Architecture</a><a href="#tools">Tools</a><a href="#certs">Certs</a><a href="#edu">Education</a><a href="#engagements">Engagements</a></nav>
+
+<nav class="tnav" aria-label="Main">
+  <a href="#exp">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#arch">Architecture</a>
+  <a href="#tools">Tools</a>
+  <a href="#certs">Certs</a>
+  <a href="#edu">Education</a>
+  <a href="#engagements">Engagements</a>
+</nav>
 
 <div class="hero">
-<h1>Products where Fintech, Health & AI converge.</h1>
-<p>Forward-deployed PM. 10 years shipping SaaS, Mobile, Web in regulated environments. X12 transactions, HL7/FHIR, AWS cloud. Integrated Claude API, ChatGPT API, Azure AI, Meta Llama, LangChain, CrewAI into enterprise workflows across 20 countries.</p>
+  <svg class="hero-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><linearGradient id="g1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+    <circle cx="100" cy="100" r="60" stroke="url(#g1)" stroke-width="2" fill="none"/>
+    <circle cx="100" cy="100" r="40" stroke="url(#g1)" stroke-width="1.5" fill="none" opacity=".6"/>
+    <circle cx="100" cy="100" r="80" stroke="url(#g1)" stroke-width="1" fill="none" opacity=".4"/>
+    <circle cx="100" cy="40" r="4" fill="#2563eb"/>
+    <circle cx="160" cy="100" r="4" fill="#7c3aed"/>
+    <circle cx="100" cy="160" r="4" fill="#16a34a"/>
+    <circle cx="40" cy="100" r="4" fill="#2563eb"/>
+  </svg>
+  <h1>Products where <span class="grad">Fintech</span>, <span class="grad">Health</span> & <span class="grad">AI</span> converge.</h1>
+  <p>Forward-deployed PM. 10 years shipping SaaS, Mobile, Web in regulated environments. X12 transactions, HL7/FHIR, AWS cloud. Integrated Claude API, ChatGPT API, Azure AI, Meta Llama, LangChain, CrewAI into enterprise workflows across 20 countries.</p>
 </div>
 
-<div class="sec" id="exp" style="background:var(--subtle)">
-<h2>Experience</h2>
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<div class="sec" id="exp">
+<h2><span class="ico">💼</span>Experience</h2>
 <p class="sub">Outcomes delivered, compliance maintained.</p>
 
 <div class="exp fade">
 <div class="exp-top"><div><h3>Staff Consultant · Technical PM</h3><div class="co">Nagarro Enterprise Services</div></div><div class="dt">Jun 2022 — Present</div></div>
-<div class="exp-sc">Amplify Health · Big Three Consulting · UNICEF SES</div>
+<div class="exp-sc">Amplify Health · Tier-1 Consulting Client · UNICEF SES</div>
 <ul>
-<li><strong>Healthcare SaaS (10M):</strong> 0-to-1 Singapore → 20 countries; X12 EDI (837/835/270/271) in FHIR module; financial wellness SDK</li>
+<li><strong>Healthcare SaaS (1M+):</strong> 0-to-1 Singapore → 20 countries; X12 EDI (837/835/270/271) in FHIR module; financial wellness SDK</li>
 <li><strong>AWS:</strong> S3, Lambda, SQS, SNS, API Gateway, CloudWatch, IAM, Bedrock; PostgreSQL → AWS migration</li>
 <li><strong>AI:</strong> Claude API, ChatGPT API, Azure AI, Meta Llama via Bedrock; LangChain + CrewAI; Drain3 + RAG hybrid</li>
 <li><strong>Fintech:</strong> Stripe + Vindi bank reconciliation across 4 European banks; multi-currency; fraud detection</li>
 </ul>
-<div class="out">10M users · CSAT 88→94% · $5M saved Q3'25–Q2'26 · 99.8% accuracy · 0 PII breaches · Award Q4'25</div>
+<div class="out">1M+ users · CSAT 88→94% · $5M saved Q3'25–Q2'26 · 99.8% accuracy · 0 PII breaches · Client Performer Award Q4'25</div>
 <div class="tags"><span>X12</span><span>FHIR</span><span>AWS</span><span>Claude API</span><span>ChatGPT API</span><span>Meta</span><span>LangChain</span><span>Stripe</span><span>HIPAA</span></div>
 </div>
 
@@ -230,7 +351,7 @@ footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border
 <li>$10M+ omnichannel SaaS; 24-person team; 250+ user stories; Dialogflow CCAI + OpenAI NLP</li>
 <li>15 A/B tests; webhooks, microservices, API orchestration; latency 10s → 7s</li>
 </ul>
-<div class="out">CSAT +35% · AHT −25% · $10M savings · recall 98% · containment +42% · 8 sprints 0 missed</div>
+<div class="out">CSAT +35% · AHT -25% · $10M savings · recall 98% · containment +42% · 8 sprints 0 missed</div>
 </div>
 
 <div class="exp fade">
@@ -240,7 +361,7 @@ footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border
 <li>Bank-to-insurance cross-sell; custom premium pricing engine; PII + health history → real-time quote</li>
 <li>ICD claims, hospital provider networks, copay, underwriting; 120-page BRD</li>
 </ul>
-<div class="out">95% MVP on-time · GBP 2M expansion · underwriting −45% · effort −80%</div>
+<div class="out">95% MVP on-time · GBP 2M expansion · underwriting -45% · effort -80%</div>
 </div>
 
 <div class="exp fade">
@@ -248,25 +369,63 @@ footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border
 <div class="exp-sc">Salesforce Capital Markets · 3-in-1 Accounts · BFSI</div>
 <ul>
 <li>3-in-1 accounts; fund lifecycle (add → verify → allocate → settle → release); Stripe SIP; SFTP recon 40 → 80%</li>
-<li>Automated risk profiling; dynamic product lock/unlock; SMS360 + WhatsApp equity alerts; 200+ staff</li>
+<li>Automated risk profiling; dynamic product lock/unlock; SMS360 + WhatsApp equity alerts; 200+ staff trained</li>
 </ul>
 <div class="out">90% acquisition · 95% retention · recon 40→80% · 12 releases 0 rollbacks</div>
 </div>
 
 <div class="exp fade">
 <div class="exp-top"><div><h3>Business Analyst</h3><div class="co">The Stone Palace</div></div><div class="dt">Jul 2015 — Mar 2017</div></div>
-<ul><li>0-to-1 fleet analytics; Tableau dashboards; Waterfall → Agile-Kanban</li></ul>
-<div class="out">Efficiency +40% · onboarding −60% · SLA breaches −55%</div>
+<ul><li>0-to-1 fleet analytics; Tableau dashboards; Waterfall → Agile-Kanban transition</li></ul>
+<div class="out">Efficiency +40% · onboarding -60% · SLA breaches -55%</div>
 </div>
 </div>
+
+<div class="divider"></div>
+
+<!-- FEATURED PROJECTS -->
+<div class="sec" id="projects" style="background:var(--bg-alt)">
+<h2><span class="ico">🚀</span>Featured Projects</h2>
+<p class="sub">Public-safe case studies. No client data.</p>
+
+<div class="projects" style="margin-top:.6rem">
+<a href="https://github.com/vittobh/AI-assisted-KYC-and-customer-onboarding" class="proj-tile fade" target="_blank" rel="noopener">
+<h4>AI-Assisted KYC & Onboarding <span class="arrow">↗</span></h4>
+<p>Agentic AI platform for BFSI onboarding. 7 bounded agents, deterministic gates, event-sourced audit log. Compliance-mapped to FATF · EU AI Act · GDPR.</p>
+<div class="proj-stack"><span>Agentic AI</span><span>BFSI</span><span>KYC</span><span>FATF</span><span>EU AI Act</span></div>
+</a>
+<a href="https://github.com/vittobh/AI-EHR-intelligence-platform" class="proj-tile fade" target="_blank" rel="noopener">
+<h4>AI EHR Intelligence Platform <span class="arrow">↗</span></h4>
+<p>AI-driven healthcare reporting and scientific intelligence. FHIR · HL7 · clinical decision support · clinician-in-the-loop.</p>
+<div class="proj-stack"><span>FHIR</span><span>HL7</span><span>EHR</span><span>HIPAA</span></div>
+</a>
+<a href="https://github.com/vittobh/Gen-AI-Financial-IQ-Contract-Ingestion" class="proj-tile fade" target="_blank" rel="noopener">
+<h4>Gen AI Financial IQ <span class="arrow">↗</span></h4>
+<p>Agentic banking contract ingestion case study. ERD, SQL schema, auth sequence design.</p>
+<div class="proj-stack"><span>Gen AI</span><span>Banking</span><span>RAG</span></div>
+</a>
+<a href="https://github.com/vittobh/Product-Business-Data-Strategy-US-Health" class="proj-tile fade" target="_blank" rel="noopener">
+<h4>US Health Data Strategy <span class="arrow">↗</span></h4>
+<p>Healthcare archival economics, HL7 retrieval strategy, governance. Executive KPI design and lineage framework.</p>
+<div class="proj-stack"><span>Data Strategy</span><span>US Health</span><span>Snowflake</span></div>
+</a>
+<a href="https://github.com/vittobh/B2C-Consumer-Meta-Intelligence-Research" class="proj-tile fade" target="_blank" rel="noopener">
+<h4>B2C Consumer Meta Intel <span class="arrow">↗</span></h4>
+<p>UK media intelligence and sponsorship analytics research. Consumer signal aggregation across channels.</p>
+<div class="proj-stack"><span>Consumer Intel</span><span>UK Market</span></div>
+</a>
+</div>
+</div>
+
+<div class="divider"></div>
 
 <!-- ARCHITECTURE -->
 <div class="sec" id="arch">
-<h2>Architecture</h2>
+<h2><span class="ico">🏗</span>Architecture</h2>
 <p class="sub">Systems I designed — anonymised.</p>
 
 <div class="arch fade">
-<div class="arch-title">Healthcare SaaS · 10M Users · 20 Countries</div>
+<div class="arch-title">Healthcare SaaS · 1M+ Users · 20 Countries</div>
 <div class="arch-flow">
 <div class="arch-box"><div class="ab-t">EHR Ingestion</div><div class="ab-s">HL7 · FHIR · X12</div></div>
 <div class="arch-arrow">→</div>
@@ -311,28 +470,34 @@ footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border
 </div>
 </div>
 
+<div class="divider"></div>
+
 <!-- CURRENTLY EXPLORING -->
-<div class="sec" style="background:var(--subtle)">
-<h2>Currently Exploring</h2>
+<div class="sec" style="background:var(--bg-alt)">
+<h2><span class="ico">🔬</span>Currently Exploring</h2>
 <div class="expl" style="margin-top:.5rem">
-<div class="expl-card fade"><h4>Multi-Agent Orchestration</h4><p>A2A Protocol, MCP, CrewAI workflows, runaway loop prevention, silent failure detection</p></div>
-<div class="expl-card fade"><h4>Healthcare Interoperability</h4><p>X12 EDI automation, FHIR R4 bulk data, CMS interoperability rules, payer-provider exchange</p></div>
-<div class="expl-card fade"><h4>AI in Fintech Compliance</h4><p>Automated suitability assessment, AI-driven KYC/AML, real-time fraud scoring, regulatory guardrails</p></div>
+<div class="expl-card fade"><h4>Multi-Agent Orchestration</h4><p>A2A Protocol · MCP · CrewAI workflows · runaway loop prevention · silent failure detection</p></div>
+<div class="expl-card fade"><h4>Healthcare Interoperability</h4><p>X12 EDI automation · FHIR R4 bulk data · CMS interoperability rules · payer-provider exchange</p></div>
+<div class="expl-card fade"><h4>AI in Fintech Compliance</h4><p>Automated suitability assessment · AI-driven KYC/AML · real-time fraud scoring · regulatory guardrails</p></div>
 </div>
 </div>
 
+<div class="divider"></div>
+
 <!-- TOOLS -->
 <div class="sec" id="tools">
-<h2>Tools</h2>
-<div style="margin-top:.4rem">
+<h2><span class="ico">🛠</span>Tools</h2>
+<div style="margin-top:.5rem">
 <span class="tp">Stripe</span><span class="tp">Salesforce</span><span class="tp">ERPNext</span><span class="tp">FHIR Tools</span><span class="tp">HL7</span><span class="tp">X12 EDI</span><span class="tp">EHR</span><span class="tp">Consent APIs</span><span class="tp">Claude API</span><span class="tp">ChatGPT API</span><span class="tp">Azure AI</span><span class="tp">LangChain</span><span class="tp">CrewAI</span><span class="tp">LangGraph</span><span class="tp">Dialogflow</span><span class="tp">AWS S3</span><span class="tp">Lambda</span><span class="tp">Bedrock</span><span class="tp">Terraform</span><span class="tp">Docker</span><span class="tp">Jira</span><span class="tp">Confluence</span><span class="tp">Figma</span><span class="tp">Miro</span><span class="tp">Postman</span><span class="tp">Git</span><span class="tp">Snowflake</span><span class="tp">Power BI</span><span class="tp">Tableau</span><span class="tp">Kibana</span><span class="tp">PostgreSQL</span><span class="tp">Kafka</span><span class="tp">REST APIs</span><span class="tp">Playwright</span>
 </div>
 </div>
 
+<div class="divider"></div>
+
 <!-- CERTS -->
-<div class="sec" id="certs" style="background:var(--subtle)">
-<h2>Certifications</h2>
-<div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem">
+<div class="sec" id="certs" style="background:var(--bg-alt)">
+<h2><span class="ico">🏅</span>Certifications</h2>
+<div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem">
 <div class="ct"><div class="cn">CSPO</div><div class="co">Nagarro '25</div></div>
 <div class="ct"><div class="cn">Technical PM</div><div class="co">Nagarro '25</div></div>
 <div class="ct"><div class="cn">AI in PM</div><div class="co">O'Reilly '25</div></div>
@@ -341,18 +506,22 @@ footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border
 </div>
 </div>
 
+<div class="divider"></div>
+
 <!-- EDUCATION -->
 <div class="sec" id="edu">
-<h2>Education</h2>
-<div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem">
-<div class="ct" style="text-align:left;padding:.5rem .65rem"><div class="cn">Post Graduate Certificate · International Project Management</div><div class="co">Anglia Ruskin University, London 🇬🇧</div></div>
-<div class="ct" style="text-align:left;padding:.5rem .65rem"><div class="cn">Bachelor of Engineering · Computer Software Engineering</div><div class="co">Anna University, Chennai 🇮🇳</div></div>
+<h2><span class="ico">🎓</span>Education</h2>
+<div style="display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.5rem">
+<div class="ct" style="text-align:left;padding:.6rem .8rem"><div class="cn">Post Graduate Certificate · International Project Management</div><div class="co">Anglia Ruskin University, London 🇬🇧</div></div>
+<div class="ct" style="text-align:left;padding:.6rem .8rem"><div class="cn">Bachelor of Engineering · Computer Software Engineering</div><div class="co">Anna University, Chennai 🇮🇳</div></div>
 </div>
 </div>
 
+<div class="divider"></div>
+
 <!-- ENGAGEMENTS -->
-<div class="sec" id="engagements" style="background:var(--subtle)">
-<h2>Engagements</h2>
+<div class="sec" id="engagements" style="background:var(--bg-alt)">
+<h2><span class="ico">🌍</span>Engagements</h2>
 <p class="sub">Client + product lines I've shipped against — anonymised where required.</p>
 <div class="expl" style="margin-top:.5rem">
 <div class="expl-card fade"><h4>Discovery Vitality</h4><p>Amplify Health · 0-to-1 to 1M+ users · 20 countries · HIPAA + GDPR + PCI-DSS</p></div>
@@ -364,14 +533,89 @@ footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border
 </div>
 </div>
 
-<footer>Vittobha Vignesh S · 2026</footer>
+<footer>
+Vittobha Vignesh S · 2026 · <a href="https://github.com/vittobh">github.com/vittobh</a> · Built with care · Public-safe portfolio
+</footer>
 </div>
 </div>
 
+<button class="totop" id="totop" aria-label="Back to top">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 <script>
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target)}})},{threshold:.08});
-document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
-window.addEventListener('load',()=>{document.querySelectorAll('.sk .fl').forEach(f=>{const w=f.style.width;f.style.width='0';setTimeout(()=>{f.style.width=w},200)})});
+// THEME TOGGLE with localStorage persistence
+const root = document.documentElement;
+const saved = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const initial = saved || (prefersDark ? 'dark' : 'light');
+root.setAttribute('data-theme', initial);
+const themeBtn = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+function setIcon(t){
+  themeIcon.innerHTML = t === 'dark'
+    ? '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'
+    : '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+}
+setIcon(initial);
+themeBtn.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  setIcon(next);
+});
+
+// HAMBURGER (mobile)
+const burger = document.getElementById('burger');
+const sidebar = document.getElementById('sidebar');
+burger.addEventListener('click', () => sidebar.classList.toggle('open'));
+sidebar.addEventListener('click', e => { if(e.target.tagName === 'A') sidebar.classList.remove('open'); });
+
+// FADE-IN on scroll
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting){ x.target.classList.add('vis'); obs.unobserve(x.target); }});
+}, {threshold: .08});
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+// COUNT-UP stats on scroll-in
+const countObs = new IntersectionObserver(e => {
+  e.forEach(x => {
+    if(!x.isIntersecting) return;
+    const el = x.target;
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    let current = 0;
+    const step = target / 30;
+    const id = setInterval(() => {
+      current += step;
+      if(current >= target){ current = target; clearInterval(id); }
+      el.textContent = prefix + (target < 10 ? current.toFixed(1).replace('.0','') : Math.round(current)) + suffix;
+    }, 30);
+    countObs.unobserve(el);
+  });
+}, {threshold: .3});
+document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+
+// SCROLL-SPY active nav highlight
+const sections = document.querySelectorAll('.sec[id]');
+const navLinks = document.querySelectorAll('.tnav a');
+const spy = new IntersectionObserver(e => {
+  e.forEach(x => {
+    if(x.isIntersecting){
+      const id = x.target.id;
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    }
+  });
+}, {rootMargin: '-40% 0px -50% 0px'});
+sections.forEach(s => spy.observe(s));
+
+// BACK TO TOP
+const totop = document.getElementById('totop');
+window.addEventListener('scroll', () => {
+  totop.classList.toggle('show', window.scrollY > 600);
+});
+totop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 </script>
 </body>
 </html>
