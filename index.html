@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Senior Product Manager — Fintech, Healthcare, AI. X12, HL7/FHIR, AWS, Claude API, LangChain. 10M+ users.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Vittobha Vignesh S — PM · Health FHIR · Fintech · AI">
+<meta property="og:description" content="10 years where Fintech, Insurance, and AI converge. 10M+ users, $15M+ savings.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/264982118?v=4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>V</text></svg>">
+<title>Vittobha Vignesh S — PM · Health FHIR · Fintech · AI</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#1f2328;--gray:#656d76;--light:#d0d7de;--subtle:#f6f8fa;--white:#fff;
+  --bar:#1f2328;--bar-track:#e1e4e8;--sw:240px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Trebuchet MS',Trebuchet,sans-serif;background:var(--white);color:var(--black);line-height:1.55;font-size:13px;-webkit-font-smoothing:antialiased}
+a{color:var(--black);text-decoration:none;transition:.15s}
+a:hover{color:var(--gray)}
+::selection{background:var(--black);color:var(--white)}
+
+/* LAYOUT */
+.wrap{display:flex;min-height:100vh}
+
+/* SIDEBAR */
+.sb{width:var(--sw);position:fixed;top:0;left:0;height:100vh;background:var(--subtle);border-right:1px solid var(--light);overflow-y:auto;padding:1.1rem 1rem;z-index:50;display:flex;flex-direction:column;gap:.65rem}
+.sb::-webkit-scrollbar{width:3px}
+.sb::-webkit-scrollbar-thumb{background:var(--light);border-radius:2px}
+.sb-name{font-size:1.2rem;font-weight:700;letter-spacing:-.03em}
+.sb-role{font-size:.7rem;color:var(--gray);line-height:1.35;margin-top:.1rem}
+.sb-tag{display:inline-block;margin-top:.35rem;padding:.15rem .55rem;font-size:.62rem;background:var(--white);border:1px solid var(--light);border-radius:12px;color:var(--gray)}
+
+.sb-lbl{font-size:.6rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.3rem;margin-top:.1rem}
+.sb-lk{display:block;font-size:.7rem;color:var(--gray);padding:.12rem 0}
+.sb-lk:hover{color:var(--black)}
+
+.sb-stats{display:flex;gap:.3rem;flex-wrap:wrap}
+.sb-st{flex:1;min-width:50px;text-align:center;padding:.3rem .15rem;background:var(--white);border:1px solid var(--light);border-radius:4px}
+.sb-st .n{font-size:.9rem;font-weight:700;font-family:Consolas,monospace}
+.sb-st .l{font-size:.5rem;color:var(--gray);text-transform:uppercase;letter-spacing:.03em}
+
+/* SKILL BARS */
+.sk-g{margin-bottom:.15rem}
+.sk-g-t{font-size:.65rem;font-weight:700;color:var(--black);margin-bottom:.3rem}
+.sk{margin-bottom:.3rem}
+.sk .sk-n{font-size:.6rem;color:var(--black);display:flex;justify-content:space-between;margin-bottom:.1rem;font-weight:500}
+.sk .sk-n span{font-family:Consolas,monospace;font-size:.55rem;color:var(--gray);font-weight:700}
+.sk .tr{height:4px;background:var(--bar-track);border-radius:2px;overflow:hidden}
+.sk .fl{height:100%;background:var(--bar);border-radius:2px;transition:width .8s ease}
+
+.sb-cta{display:block;text-align:center;padding:.4rem;background:var(--black);color:var(--white);border-radius:5px;font-size:.72rem;font-weight:700;margin-top:auto;transition:.15s}
+.sb-cta:hover{background:var(--gray);color:var(--white)}
+
+/* MAIN */
+.mn{margin-left:var(--sw);flex:1}
+
+.tnav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);z-index:40;border-bottom:1px solid var(--light);padding:0 1.5rem;height:34px;display:flex;align-items:center;gap:1.5rem}
+.tnav a{color:var(--gray);font-size:.7rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.tnav a:hover{color:var(--black)}
+
+.hero{padding:1.2rem 1.5rem .8rem}
+.hero h1{font-size:1.5rem;font-weight:700;line-height:1.2;margin-bottom:.4rem;letter-spacing:-.03em}
+.hero p{font-size:.82rem;color:var(--gray);max-width:660px;line-height:1.6}
+
+.sec{padding:1rem 1.5rem}
+.sec h2{font-size:1.1rem;font-weight:700;margin-bottom:.1rem;letter-spacing:-.02em}
+.sec .sub{color:var(--gray);font-size:.72rem;margin-bottom:.8rem}
+
+/* EXP CARDS */
+.exp{background:var(--white);border:1px solid var(--light);border-radius:6px;padding:.7rem .9rem;margin-bottom:.45rem;position:relative;transition:box-shadow .2s}
+.exp:hover{box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.exp::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px;background:var(--black)}
+.exp-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem;margin-bottom:.2rem}
+.exp-top h3{font-size:.85rem;font-weight:700}
+.exp-top .co{font-size:.72rem;color:var(--gray);font-weight:500}
+.exp-top .dt{font-family:Consolas,monospace;font-size:.65rem;color:var(--gray)}
+.exp-sc{font-size:.7rem;color:var(--gray);font-style:italic;margin-bottom:.25rem}
+.exp ul{list-style:none;padding:0}
+.exp ul li{padding-left:.8rem;position:relative;font-size:.75rem;color:var(--gray);margin-bottom:.15rem;line-height:1.5}
+.exp ul li::before{content:'—';position:absolute;left:0;color:var(--light);font-weight:700;font-size:.7rem}
+.exp ul li strong{color:var(--black);font-weight:600}
+.exp .out{margin-top:.25rem;padding:.25rem .5rem;background:var(--subtle);border-radius:3px;font-family:Consolas,monospace;font-size:.65rem;color:var(--black);line-height:1.5}
+.exp .tags{display:flex;flex-wrap:wrap;gap:.2rem;margin-top:.25rem}
+.exp .tags span{font-family:Consolas,monospace;font-size:.58rem;padding:.08rem .3rem;border-radius:3px;border:1px solid var(--light);color:var(--gray)}
+
+/* ARCHITECTURE */
+.arch{background:var(--white);border:1px solid var(--light);border-radius:6px;padding:.7rem;margin-bottom:.5rem}
+.arch-title{font-size:.78rem;font-weight:700;margin-bottom:.4rem}
+.arch-flow{display:flex;gap:.2rem;flex-wrap:wrap;align-items:center}
+.arch-box{background:var(--subtle);border:1px solid var(--light);border-radius:4px;padding:.25rem .45rem;text-align:center;min-width:70px}
+.arch-box .ab-t{font-size:.62rem;font-weight:700;color:var(--black)}
+.arch-box .ab-s{font-size:.5rem;color:var(--gray)}
+.arch-arrow{color:var(--light);font-size:.8rem;font-weight:700}
+
+/* EXPLORE */
+.expl{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.4rem}
+.expl-card{background:var(--subtle);border:1px solid var(--light);border-radius:5px;padding:.5rem .65rem}
+.expl-card h4{font-size:.7rem;font-weight:700;margin-bottom:.15rem}
+.expl-card p{font-size:.62rem;color:var(--gray);line-height:1.45}
+
+/* TOOLS */
+.tp{font-family:Consolas,monospace;font-size:.62rem;padding:.12rem .35rem;border-radius:3px;background:var(--subtle);border:1px solid var(--light);color:var(--gray);display:inline-block;margin:.1rem}
+
+/* CERTS */
+.ct{background:var(--subtle);border:1px solid var(--light);border-radius:5px;padding:.3rem .5rem;text-align:center;flex:1;min-width:100px}
+.ct .cn{font-size:.7rem;font-weight:700}.ct .co{font-size:.58rem;color:var(--gray)}
+
+footer{text-align:center;padding:.8rem;color:var(--gray);font-size:.62rem;border-top:1px solid var(--light)}
+
+.fade{opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s}
+.fade.vis{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .sb{position:relative;width:100%;height:auto;border-right:none;border-bottom:1px solid var(--light)}
+  .mn{margin-left:0}.wrap{flex-direction:column}
+}
+
+@media print{
+  .sb{position:relative;width:100%;height:auto;border:none;page-break-after:avoid;background:#fff}
+  .mn{margin-left:0}.wrap{flex-direction:column}
+  .tnav,.sb-cta{display:none}
+  .exp{border:1px solid #ddd;page-break-inside:avoid}
+  .exp::before{background:#000}
+  body{font-size:11px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sb">
+  <div>
+    <div class="sb-name">Vittobha Vignesh S</div>
+    <div class="sb-role">Senior Product Manager<br>Health FHIR · Fintech · AI</div>
+    <div class="sb-tag">Open to PM roles</div>
+  </div>
+
+  <div>
+    <div class="sb-lbl">Contact</div>
+    <a href="mailto:vittobha2025@gmail.com" class="sb-lk">vittobha2025@gmail.com</a>
+    <a href="tel:+919486724628" class="sb-lk">+91 94867 24628</a>
+    <a href="https://linkedin.com/in/vittobha" class="sb-lk">linkedin.com/in/vittobha</a>
+    <a href="https://github.com/vittobh" class="sb-lk">github.com/vittobh</a>
+  </div>
+
+  <div class="sb-stats">
+    <div class="sb-st"><div class="n">10M</div><div class="l">Users</div></div>
+    <div class="sb-st"><div class="n">$15M</div><div class="l">Saved</div></div>
+    <div class="sb-st"><div class="n">20K</div><div class="l">Ent.</div></div>
+    <div class="sb-st"><div class="n">3×</div><div class="l">0→1</div></div>
+  </div>
+
+  <div class="sk-g">
+    <div class="sk-g-t">Fintech & BFSI</div>
+    <div class="sk"><div class="sk-n">Stripe / Payment APIs<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
+    <div class="sk"><div class="sk-n">Bank Reconciliation / SFTP<span>92</span></div><div class="tr"><div class="fl" style="width:92%"></div></div></div>
+    <div class="sk"><div class="sk-n">Risk Profiling / KYC<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
+    <div class="sk"><div class="sk-n">Fund Lifecycle / 3-in-1<span>90</span></div><div class="tr"><div class="fl" style="width:90%"></div></div></div>
+    <div class="sk"><div class="sk-n">Pricing Engine / Cross-Sell<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
+  </div>
+
+  <div class="sk-g">
+    <div class="sk-g-t">Healthcare & Insurance</div>
+    <div class="sk"><div class="sk-n">HL7 / FHIR / EHR<span>93</span></div><div class="tr"><div class="fl" style="width:93%"></div></div></div>
+    <div class="sk"><div class="sk-n">X12 (837/835/270/271)<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
+    <div class="sk"><div class="sk-n">ICD-10 / Claims / Eligibility<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
+    <div class="sk"><div class="sk-n">HIPAA / GDPR / PCI-DSS<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
+    <div class="sk"><div class="sk-n">Consent / Provider Networks<span>87</span></div><div class="tr"><div class="fl" style="width:87%"></div></div></div>
+  </div>
+
+  <div class="sk-g">
+    <div class="sk-g-t">AI Integration</div>
+    <div class="sk"><div class="sk-n">Claude API / Anthropic<span>92</span></div><div class="tr"><div class="fl" style="width:92%"></div></div></div>
+    <div class="sk"><div class="sk-n">ChatGPT API / OpenAI<span>90</span></div><div class="tr"><div class="fl" style="width:90%"></div></div></div>
+    <div class="sk"><div class="sk-n">AWS Bedrock / Meta Llama<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
+    <div class="sk"><div class="sk-n">LangChain / CrewAI / LangGraph<span>83</span></div><div class="tr"><div class="fl" style="width:83%"></div></div></div>
+    <div class="sk"><div class="sk-n">RAG / Guardrails / Observability<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
+  </div>
+
+  <div class="sk-g">
+    <div class="sk-g-t">PM Strategy</div>
+    <div class="sk"><div class="sk-n">AI Roadmapping / Strategy<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
+    <div class="sk"><div class="sk-n">PRD / BRD / User Stories<span>97</span></div><div class="tr"><div class="fl" style="width:97%"></div></div></div>
+    <div class="sk"><div class="sk-n">OKRs / North Star / RICE<span>92</span></div><div class="tr"><div class="fl" style="width:92%"></div></div></div>
+    <div class="sk"><div class="sk-n">Agile / SAFe / Scrum<span>95</span></div><div class="tr"><div class="fl" style="width:95%"></div></div></div>
+  </div>
+
+  <div class="sk-g">
+    <div class="sk-g-t">AWS Cloud</div>
+    <div class="sk"><div class="sk-n">S3 / Lambda / SQS / SNS<span>88</span></div><div class="tr"><div class="fl" style="width:88%"></div></div></div>
+    <div class="sk"><div class="sk-n">API Gateway / CloudWatch / IAM<span>85</span></div><div class="tr"><div class="fl" style="width:85%"></div></div></div>
+    <div class="sk"><div class="sk-n">Bedrock / ECR / Terraform<span>82</span></div><div class="tr"><div class="fl" style="width:82%"></div></div></div>
+  </div>
+
+  <a href="https://github.com/vittobh/vittobh/raw/main/resume/Vittobha_Resume.pdf" class="sb-cta">Download Resume</a>
+</aside>
+
+<div class="mn">
+<nav class="tnav" aria-label="Main"><a href="#exp">Experience</a><a href="#arch">Architecture</a><a href="#tools">Tools</a><a href="#certs">Certs</a></nav>
+
+<div class="hero">
+<h1>Products where Fintech, Health & AI converge.</h1>
+<p>Forward-deployed PM. 10 years shipping SaaS, Mobile, Web in regulated environments. X12 transactions, HL7/FHIR, AWS cloud. Integrated Claude API, ChatGPT API, Azure AI, Meta Llama, LangChain, CrewAI into enterprise workflows across 20 countries.</p>
+</div>
+
+<div class="sec" id="exp" style="background:var(--subtle)">
+<h2>Experience</h2>
+<p class="sub">Outcomes delivered, compliance maintained.</p>
+
+<div class="exp fade">
+<div class="exp-top"><div><h3>Staff Consultant · Technical PM</h3><div class="co">Nagarro Enterprise Services</div></div><div class="dt">Jun 2022 — Present</div></div>
+<div class="exp-sc">Amplify Health · Big Three Consulting · UNICEF SES</div>
+<ul>
+<li><strong>Healthcare SaaS (10M):</strong> 0-to-1 Singapore → 20 countries; X12 EDI (837/835/270/271) in FHIR module; financial wellness SDK</li>
+<li><strong>AWS:</strong> S3, Lambda, SQS, SNS, API Gateway, CloudWatch, IAM, Bedrock; PostgreSQL → AWS migration</li>
+<li><strong>AI:</strong> Claude API, ChatGPT API, Azure AI, Meta Llama via Bedrock; LangChain + CrewAI; Drain3 + RAG hybrid</li>
+<li><strong>Fintech:</strong> Stripe + Vindi bank reconciliation across 4 European banks; multi-currency; fraud detection</li>
+</ul>
+<div class="out">10M users · CSAT 88→94% · $5M saved Q3'25–Q2'26 · 99.8% accuracy · 0 PII breaches · Award Q4'25</div>
+<div class="tags"><span>X12</span><span>FHIR</span><span>AWS</span><span>Claude API</span><span>ChatGPT API</span><span>Meta</span><span>LangChain</span><span>Stripe</span><span>HIPAA</span></div>
+</div>
+
+<div class="exp fade">
+<div class="exp-top"><div><h3>Team Leader · CCAI Verizon</h3><div class="co">Cognizant</div></div><div class="dt">May 2021 — Jun 2022</div></div>
+<div class="exp-sc">Conversational AI — 50 Centres · 10M+ Interactions</div>
+<ul>
+<li>$10M+ omnichannel SaaS; 24-person team; 250+ user stories; Dialogflow CCAI + OpenAI NLP</li>
+<li>15 A/B tests; webhooks, microservices, API orchestration; latency 10s → 7s</li>
+</ul>
+<div class="out">CSAT +35% · AHT −25% · $10M savings · recall 98% · containment +42% · 8 sprints 0 missed</div>
+</div>
+
+<div class="exp fade">
+<div class="exp-top"><div><h3>BA · Product Owner</h3><div class="co">C2B Tech</div></div><div class="dt">Aug 2020 — Apr 2021</div></div>
+<div class="exp-sc">0-to-1 Health Insurance — South African Bank</div>
+<ul>
+<li>Bank-to-insurance cross-sell; custom premium pricing engine; PII + health history → real-time quote</li>
+<li>ICD claims, hospital provider networks, copay, underwriting; 120-page BRD</li>
+</ul>
+<div class="out">95% MVP on-time · GBP 2M expansion · underwriting −45% · effort −80%</div>
+</div>
+
+<div class="exp fade">
+<div class="exp-top"><div><h3>Asst PM · Equity Advisor</h3><div class="co">ICICI Securities</div></div><div class="dt">Mar 2017 — Jun 2019</div></div>
+<div class="exp-sc">Salesforce Capital Markets · 3-in-1 Accounts · BFSI</div>
+<ul>
+<li>3-in-1 accounts; fund lifecycle (add → verify → allocate → settle → release); Stripe SIP; SFTP recon 40 → 80%</li>
+<li>Automated risk profiling; dynamic product lock/unlock; SMS360 + WhatsApp equity alerts; 200+ staff</li>
+</ul>
+<div class="out">90% acquisition · 95% retention · recon 40→80% · 12 releases 0 rollbacks</div>
+</div>
+
+<div class="exp fade">
+<div class="exp-top"><div><h3>Business Analyst</h3><div class="co">The Stone Palace</div></div><div class="dt">Jul 2015 — Mar 2017</div></div>
+<ul><li>0-to-1 fleet analytics; Tableau dashboards; Waterfall → Agile-Kanban</li></ul>
+<div class="out">Efficiency +40% · onboarding −60% · SLA breaches −55%</div>
+</div>
+</div>
+
+<!-- ARCHITECTURE -->
+<div class="sec" id="arch">
+<h2>Architecture</h2>
+<p class="sub">Systems I designed — anonymised.</p>
+
+<div class="arch fade">
+<div class="arch-title">Healthcare SaaS · 10M Users · 20 Countries</div>
+<div class="arch-flow">
+<div class="arch-box"><div class="ab-t">EHR Ingestion</div><div class="ab-s">HL7 · FHIR · X12</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">AWS Pipeline</div><div class="ab-s">S3 · Lambda · SQS</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Rules Engine</div><div class="ab-s">Eligibility · Consent</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">ML Suggestions</div><div class="ab-s">Clinician HITL</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Mobile + Web</div><div class="ab-s">iOS · Android</div></div>
+</div>
+</div>
+
+<div class="arch fade">
+<div class="arch-title">Agentic AI Platform · 20K Enterprise Users</div>
+<div class="arch-flow">
+<div class="arch-box"><div class="ab-t">Telemetry</div><div class="ab-s">Aternity · Riverbed</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Drain3 RCA</div><div class="ab-s">Log Mining</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Claude RAG</div><div class="ab-s">Retrieval · Explain</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Guardrails</div><div class="ab-s">RLHF · HITL · Drift</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Resolution</div><div class="ab-s">ServiceNow</div></div>
+</div>
+</div>
+
+<div class="arch fade">
+<div class="arch-title">BFSI Risk Platform · Fund Lifecycle + Compliance</div>
+<div class="arch-flow">
+<div class="arch-box"><div class="ab-t">KYC Intake</div><div class="ab-s">PAN · Bank Link</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Risk Scoring</div><div class="ab-s">Net Worth · Income</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Product Gate</div><div class="ab-s">Lock / Unlock</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Fund Lifecycle</div><div class="ab-s">Add → Settle</div></div>
+<div class="arch-arrow">→</div>
+<div class="arch-box"><div class="ab-t">Reconciliation</div><div class="ab-s">SFTP · XML</div></div>
+</div>
+</div>
+</div>
+
+<!-- CURRENTLY EXPLORING -->
+<div class="sec" style="background:var(--subtle)">
+<h2>Currently Exploring</h2>
+<div class="expl" style="margin-top:.5rem">
+<div class="expl-card fade"><h4>Multi-Agent Orchestration</h4><p>A2A Protocol, MCP, CrewAI workflows, runaway loop prevention, silent failure detection</p></div>
+<div class="expl-card fade"><h4>Healthcare Interoperability</h4><p>X12 EDI automation, FHIR R4 bulk data, CMS interoperability rules, payer-provider exchange</p></div>
+<div class="expl-card fade"><h4>AI in Fintech Compliance</h4><p>Automated suitability assessment, AI-driven KYC/AML, real-time fraud scoring, regulatory guardrails</p></div>
+</div>
+</div>
+
+<!-- TOOLS -->
+<div class="sec" id="tools">
+<h2>Tools</h2>
+<div style="margin-top:.4rem">
+<span class="tp">Stripe</span><span class="tp">Salesforce</span><span class="tp">ERPNext</span><span class="tp">FHIR Tools</span><span class="tp">HL7</span><span class="tp">X12 EDI</span><span class="tp">EHR</span><span class="tp">Consent APIs</span><span class="tp">Claude API</span><span class="tp">ChatGPT API</span><span class="tp">Azure AI</span><span class="tp">LangChain</span><span class="tp">CrewAI</span><span class="tp">LangGraph</span><span class="tp">Dialogflow</span><span class="tp">AWS S3</span><span class="tp">Lambda</span><span class="tp">Bedrock</span><span class="tp">Terraform</span><span class="tp">Docker</span><span class="tp">Jira</span><span class="tp">Confluence</span><span class="tp">Figma</span><span class="tp">Miro</span><span class="tp">Postman</span><span class="tp">Git</span><span class="tp">Snowflake</span><span class="tp">Power BI</span><span class="tp">Tableau</span><span class="tp">Kibana</span><span class="tp">PostgreSQL</span><span class="tp">Kafka</span><span class="tp">REST APIs</span><span class="tp">Playwright</span>
+</div>
+</div>
+
+<!-- CERTS -->
+<div class="sec" id="certs" style="background:var(--subtle)">
+<h2>Certifications</h2>
+<div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem">
+<div class="ct"><div class="cn">CSPO</div><div class="co">Nagarro '25</div></div>
+<div class="ct"><div class="cn">Technical PM</div><div class="co">Nagarro '25</div></div>
+<div class="ct"><div class="cn">AI in PM</div><div class="co">O'Reilly '25</div></div>
+<div class="ct"><div class="cn">Claude Code</div><div class="co">Anthropic '26</div></div>
+<div class="ct"><div class="cn">GenAI</div><div class="co">IBM '26</div></div>
+</div>
+</div>
+
+<footer>Vittobha Vignesh S · 2026</footer>
+</div>
+</div>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target)}})},{threshold:.08});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+window.addEventListener('load',()=>{document.querySelectorAll('.sk .fl').forEach(f=>{const w=f.style.width;f.style.width='0';setTimeout(()=>{f.style.width=w},200)})});
+</script>
+</body>
+</html>
